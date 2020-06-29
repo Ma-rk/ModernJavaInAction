@@ -12,6 +12,7 @@ import com.mark.ModernJavaInAction._02._02_Quiz.AppleSimpleFormatter;
 import com.mark.ModernJavaInAction._02._03_Quiz.MeaningOfThis;
 import com.mark.ModernJavaInAction._02._03_TacklingVerbosity._2_UsingAnonymousClass;
 import com.mark.ModernJavaInAction._02._03_TacklingVerbosity._3_UsingLambdaExpression;
+import com.mark.ModernJavaInAction._02._04_AbstractingOverListType._4_AbstractingOverListType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -110,6 +111,17 @@ public class _1_FilterAppleTest {
     assertEquals(3, greenAppleList.size());
 
     List<Apple> redAppleList = _3_UsingLambdaExpression.filterRedApple(this.colorAppleList);
+    redAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.RED));
+    assertEquals(2, redAppleList.size());
+  }
+
+  @Test
+  public void testAbstractingOverListType() {
+    List<Apple> greenAppleList = _4_AbstractingOverListType.filter(this.colorAppleList, (Apple apple) -> Color.GREEN.equals(apple.getColor()));
+    greenAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.GREEN));
+    assertEquals(3, greenAppleList.size());
+
+    List<Apple> redAppleList = _4_AbstractingOverListType.filter(this.colorAppleList, (Apple apple) -> Color.RED.equals(apple.getColor()));
     redAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.RED));
     assertEquals(2, redAppleList.size());
   }
