@@ -24,4 +24,14 @@ public class _1_FilterApple {
     }
     return result;
   }
+
+  public static List<Apple> _2_filterAppleByWeight(List<Apple> inventory, int weight) {
+    List<Apple> result = new ArrayList<>();
+    for (Apple apple : inventory) {
+      if (weight < apple.getWeight()) {
+        result.add(apple);
+      }
+    }
+    return result;
+  }
 }

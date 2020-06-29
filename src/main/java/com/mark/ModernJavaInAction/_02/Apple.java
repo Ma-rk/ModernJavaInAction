@@ -7,6 +7,13 @@ public class Apple {
     this.color = color;
   }
 
+  public Apple(int weight) {
+    this.weight = weight;
+  }
+
   @Getter
   public Color color;
+
+  @Getter
+  public int weight;
 }

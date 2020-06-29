@@ -7,35 +7,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class _1_FilterAppleTest {
-  private List<Apple> appleList;
+  private List<Apple> colorAppleList;
+  private List<Apple> weightAppleList;
 
   @BeforeEach
   void init() {
-    appleList = new ArrayList<>();
-    appleList.add(new Apple(Color.GREEN));
-    appleList.add(new Apple(Color.RED));
-    appleList.add(new Apple(Color.GREEN));
-    appleList.add(new Apple(Color.RED));
-    appleList.add(new Apple(Color.GREEN));
+    colorAppleList = new ArrayList<>();
+    colorAppleList.add(new Apple(Color.GREEN));
+    colorAppleList.add(new Apple(Color.RED));
+    colorAppleList.add(new Apple(Color.GREEN));
+    colorAppleList.add(new Apple(Color.RED));
+    colorAppleList.add(new Apple(Color.GREEN));
+
+    weightAppleList = new ArrayList<>();
+    weightAppleList.add(new Apple(130));
+    weightAppleList.add(new Apple(140));
+    weightAppleList.add(new Apple(150));
+    weightAppleList.add(new Apple(160));
+    weightAppleList.add(new Apple(170));
   }
 
   @Test
   public void testFilterGreenApples() {
-    List<Apple> filteredList = _1_FilterApple._1_filterGreenApples(this.appleList);
+    List<Apple> filteredList = _1_FilterApple._1_filterGreenApples(this.colorAppleList);
     filteredList.forEach(apple -> assertEquals(apple.getColor(), Color.GREEN));
-    assertEquals(filteredList.size(), 3);
+    assertEquals(3, filteredList.size());
   }
 
   @Test
   public void testFilterAppleByColor() {
-    List<Apple> greenAppleList = _1_FilterApple._2_filterAppleByColor(this.appleList, Color.GREEN);
+    List<Apple> greenAppleList = _1_FilterApple._2_filterAppleByColor(this.colorAppleList, Color.GREEN);
     greenAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.GREEN));
-    assertEquals(greenAppleList.size(), 3);
+    assertEquals(3, greenAppleList.size());
 
-    List<Apple> redAppleList = _1_FilterApple._2_filterAppleByColor(this.appleList, Color.RED);
+    List<Apple> redAppleList = _1_FilterApple._2_filterAppleByColor(this.colorAppleList, Color.RED);
     redAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.RED));
-    assertEquals(redAppleList.size(), 2);
+    assertEquals(2, redAppleList.size());
+  }
+
+  @Test
+  public void testFilterAppleByWeight() {
+    List<Apple> filteredList = _1_FilterApple._2_filterAppleByWeight(this.weightAppleList, 150);
+    filteredList.forEach(apple -> assertTrue(150 < apple.getWeight()));
+    assertEquals(2, filteredList.size());
   }
 }
