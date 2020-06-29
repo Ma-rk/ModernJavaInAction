@@ -8,7 +8,7 @@ import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Color;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.ApplePredicate;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization._1_BehaviorParameterization;
 
-public class UsingAnonymousClass {
+public class _2_UsingAnonymousClass {
   public static List<Apple> filterGreenApple(List<Apple> appleList) {
     return _1_BehaviorParameterization.filterApples(appleList, new ApplePredicate() {
       @Override

@@ -5,13 +5,12 @@ import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Color;
 import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements._1_FilterApple;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleGreenColorPredicate;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleHeavyWeightPredicate;
-import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.ApplePredicate;
 import com.mark.ModernJavaInAction._02._02_Quiz.PrettyPrintApple;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization._1_BehaviorParameterization;
 import com.mark.ModernJavaInAction._02._02_Quiz.AppleFancyFormatter;
 import com.mark.ModernJavaInAction._02._02_Quiz.AppleSimpleFormatter;
 import com.mark.ModernJavaInAction._02._03_Quiz.MeaningOfThis;
-import com.mark.ModernJavaInAction._02._03_TacklingVerbosity.UsingAnonymousClass;
+import com.mark.ModernJavaInAction._02._03_TacklingVerbosity._2_UsingAnonymousClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -88,11 +87,11 @@ public class _1_FilterAppleTest {
 
   @Test
   public void testUsingAnonymousClass() {
-    List<Apple> greenAppleList = UsingAnonymousClass.filterGreenApple(this.colorAppleList);
+    List<Apple> greenAppleList = _2_UsingAnonymousClass.filterGreenApple(this.colorAppleList);
     greenAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.GREEN));
     assertEquals(3, greenAppleList.size());
 
-    List<Apple> redAppleList = UsingAnonymousClass.filterRedApple(this.colorAppleList);
+    List<Apple> redAppleList = _2_UsingAnonymousClass.filterRedApple(this.colorAppleList);
     redAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.RED));
     assertEquals(2, redAppleList.size());
   }
