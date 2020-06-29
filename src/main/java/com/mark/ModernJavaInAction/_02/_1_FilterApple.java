@@ -14,4 +14,14 @@ public class _1_FilterApple {
     }
     return result;
   }
+
+  public static List<Apple> _2_filterAppleByColor(List<Apple> inventory, Color color) {
+    List<Apple> result = new ArrayList<>();
+    for (Apple apple : inventory) {
+      if (apple.getColor().equals(color)) {
+        result.add(apple);
+      }
+    }
+    return result;
+  }
 }
