@@ -1,4 +1,4 @@
-package com.mark.ModernJavaInAction._02;
+package com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements;
 
 
 import java.util.ArrayList;

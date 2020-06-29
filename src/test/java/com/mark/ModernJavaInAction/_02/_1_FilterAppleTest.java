@@ -1,5 +1,8 @@
 package com.mark.ModernJavaInAction._02;
 
+import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Apple;
+import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Color;
+import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements._1_FilterApple;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleGreenColorPredicate;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleHeavyWeightPredicate;
 import com.mark.ModernJavaInAction._02._02_Quiz.PrettyPrintApple;

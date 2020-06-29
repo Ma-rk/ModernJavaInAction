@@ -1,7 +1,6 @@
 package com.mark.ModernJavaInAction._02._02_Quiz;
 
-import com.mark.ModernJavaInAction._02.Apple;
-import com.mark.ModernJavaInAction._02._02_Quiz.AppleFormatter;
+import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Apple;
 
 import java.util.List;
 

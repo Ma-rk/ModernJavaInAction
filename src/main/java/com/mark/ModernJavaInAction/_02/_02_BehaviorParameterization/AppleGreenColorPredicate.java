@@ -1,7 +1,7 @@
 package com.mark.ModernJavaInAction._02._02_BehaviorParameterization;
 
-import com.mark.ModernJavaInAction._02.Apple;
-import com.mark.ModernJavaInAction._02.Color;
+import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Apple;
+import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Color;
 
 public class AppleGreenColorPredicate implements ApplePredicate {
   @Override
