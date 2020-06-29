@@ -1,5 +1,8 @@
 package com.mark.ModernJavaInAction._02;
 
+import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleGreenColorPredicate;
+import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleHeavyWeightPredicate;
+import com.mark.ModernJavaInAction._02._02_BehaviorParameterization._1_BehaviorParameterization;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -53,5 +56,18 @@ public class _1_FilterAppleTest {
     List<Apple> filteredList = _1_FilterApple._2_filterAppleByWeight(this.weightAppleList, 150);
     filteredList.forEach(apple -> assertTrue(150 < apple.getWeight()));
     assertEquals(2, filteredList.size());
+  }
+
+  @Test
+  public void testFilterApplesByPredicate() {
+    List<Apple> greenAppleList
+            = _1_BehaviorParameterization.filterApples(this.colorAppleList, new AppleGreenColorPredicate());
+    greenAppleList.forEach(apple -> assertEquals(apple.getColor(), Color.GREEN));
+    assertEquals(3, greenAppleList.size());
+
+    List<Apple> heavyAppleList
+            = _1_BehaviorParameterization.filterApples(this.weightAppleList, new AppleHeavyWeightPredicate());
+    heavyAppleList.forEach(apple -> assertTrue(150 < apple.getWeight()));
+    assertEquals(2, heavyAppleList.size());
   }
 }
