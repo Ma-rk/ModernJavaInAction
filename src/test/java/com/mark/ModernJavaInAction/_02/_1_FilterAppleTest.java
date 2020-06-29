@@ -2,7 +2,10 @@ package com.mark.ModernJavaInAction._02;
 
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleGreenColorPredicate;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization.AppleHeavyWeightPredicate;
+import com.mark.ModernJavaInAction._02._02_Quiz.PrettyPrintApple;
 import com.mark.ModernJavaInAction._02._02_BehaviorParameterization._1_BehaviorParameterization;
+import com.mark.ModernJavaInAction._02._02_Quiz.AppleFancyFormatter;
+import com.mark.ModernJavaInAction._02._02_Quiz.AppleSimpleFormatter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -70,4 +73,11 @@ public class _1_FilterAppleTest {
     heavyAppleList.forEach(apple -> assertTrue(150 < apple.getWeight()));
     assertEquals(2, heavyAppleList.size());
   }
+
+  @Test
+  public void testPrettyPrintApple(){
+    PrettyPrintApple.prettyPrintApple(this.weightAppleList, new AppleSimpleFormatter());
+    PrettyPrintApple.prettyPrintApple(this.colorAppleList, new AppleFancyFormatter());
+  }
+
 }
