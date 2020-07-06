@@ -11,4 +11,10 @@ public class _03_ExecuteAroundPattern {
       return br.readLine();
     }
   }
+
+  public String processFileWithLamda(_03_BufferedReaderProcessor p) throws IOException {
+    try (BufferedReader br = new BufferedReader(new FileReader("/Users/hakkyeol.kim/logs/sendBatch2.txt"))) {
+      return p.process(br);
+    }
+  }
 }
