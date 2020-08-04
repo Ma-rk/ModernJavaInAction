@@ -15,5 +15,5 @@ public class Apple {
   public Color color;
 
   @Getter
-  public int weight;
+  public Integer weight;
 }
