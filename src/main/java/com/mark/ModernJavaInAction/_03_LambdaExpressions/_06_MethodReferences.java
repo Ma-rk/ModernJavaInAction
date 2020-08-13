@@ -3,7 +3,6 @@ package com.mark.ModernJavaInAction._03_LambdaExpressions;
 import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Apple;
 import com.mark.ModernJavaInAction._02._01_CopingWithChangingRequirements.Color;
 import com.mark.ModernJavaInAction.global.DataFactory;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,9 +11,6 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import java.util.stream.IntStream;
-
-import static com.mark.ModernJavaInAction._03_LambdaExpressions._04_UsingFunctionalInterfaces.*;
 
 public class _06_MethodReferences {
   public void sampleCode1() {
